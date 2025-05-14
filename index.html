@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <form action="">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre"><br>
-        <label for="apellido">Apellido</label>
-        <input type="text" name="apellido" id="apellido"><br>
-        <label for="genero">Genero</label>
-        <select name="genero" id="genero">
-            <option value="M">Masculino</option>
-            <option value="F">Femenino</option>
-        </select><br>
-        <label for="carrera">Carrera</label>
-        <input type="text" name="carrera" id="carrera"><br>
-        <label for="comentarios">Comentarios</label><br>
-        <textarea name="comentarios" id="comentarios"></textarea><br>
-        <button>CREAR</button>
-    </form>
+  <form>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+
+    <label for="apellido">Apellido</label>
+    <input type="text" name="apellido" id="apellido">
+
+    <label for="genero">Género</label>
+    <select name="genero" id="genero">
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+    </select>
+
+    <label for="carrera">Carrera</label>
+    <input type="text" name="carrera" id="carrera">
+
+    <label for="comentarios">Comentarios</label>
+    <textarea name="comentarios" id="comentarios"></textarea>
+
+    <button type="submit">CREAR</button>
+  </form>
 </body>
 </html>
