@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <form>
+  <form id="form">
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" id="nombre">
 
     <label for="apellido">Apellido</label>
     <input type="text" name="apellido" id="apellido">
+    <label for="edad">Edad</label>
+    <input type="text" name="edad" id="edad">
 
     <label for="genero">Género</label>
     <select name="genero" id="genero">
@@ -28,5 +30,27 @@
 
     <button type="submit">CREAR</button>
   </form>
+  <script>
+    const form = document.getElementById('form');
+
+    form.addEventListener('submit', async (e) =>{
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        const response = await fetch('https://tuve-fe-production.up.railway.app/alumnos',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+        if(response.ok){
+            alert("Formulario enviado con exito");
+            form.reset();
+        }else{
+            alert("Error al enviar");
+        }
+    });
+  </script>
 </body>
 </html>
